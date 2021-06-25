@@ -1,3 +1,14 @@
+h1{
+    font-size: 28px;
+}
+
+.header{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/homeHeader.jpg);
+}
+
+nav .fas{
+    margin-right: 5px;
+}
 nav ul{
     margin-right: 0px;
     float: left;
@@ -93,17 +104,14 @@ nav ul li a:hover{
     font-size: 13px;
 }
 
-
-
 .row{
     flex-direction: column;
 }
 
-
 /* Call to action section Started */
 
 .cta{
-    
+    /* width: 80%; */
     padding: 60px 20px;
 }
 .cta h1{
@@ -112,6 +120,23 @@ nav ul li a:hover{
 
 /* Call to action section Ended */
 
+/* contact page started */
+
+.contactCol div .fa{
+    font-size: 20px;
+    margin: 5px;
+    margin-right: 20px;
+}
+.contactCol div .far{
+    font-size: 20px;
+    margin: 5px;
+    margin-right: 20px;
+}
+.contactCol div h5{
+    font-size: 15px;
+}
+
+/* contact page ended */
 
 [class*="col-"] {
     width: 100%;

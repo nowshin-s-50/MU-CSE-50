@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -26,7 +27,8 @@ p{
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/aca_building.jpg);
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/aca_building.jpg); */
+    background: url(images/homeHeader.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -52,9 +54,13 @@ p{
 
 nav{
     /* background: #1b1b1b; */
-    background-image: linear-gradient(to left, #ff0a6c, #4a3cdb);
-    /* background-image: linear-gradient(to left, #a52cdf, #106ad2); */
+    /* background-image: linear-gradient(to left, #ff0a6c, #4a3cdb); */
+    /* background-image: linear-gradient(to right, #001B48, #00a8ad); */
+    background-image: linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.8));
 
+}
+nav .fas{
+    color: #00bbc2;
 }
 nav::after{
     content: '';
@@ -93,8 +99,8 @@ nav ul li a{
 nav ul li a:hover{
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px #fff,
-                0 0 10px #fff;
+    box-shadow: 0 0 10px #00bbc2,
+                0 0 10px #00bbc2;
 }
 
 nav ul ul li a:hover{
@@ -108,14 +114,16 @@ nav ul ul li a:hover{
 nav ul ul{
     position: absolute;
     top: 100px;
-    border-top: 3px solid #ff0a6c;    
+    border-top: 3px solid #00a8ad;    
     opacity: 0;
     visibility: hidden;
     transition: top 0.3s;
 }
 
 nav ul ul li{
-    background-image: linear-gradient(to left, #ff0a6c, #4a3cdb);
+    background-image: linear-gradient(rgba(4,9,30,0.9),rgba(4,9,30,0.9));
+    /* background-image: linear-gradient(to right, #001B48, #00a8ad); */
+    /* background-image: linear-gradient(to left, #ff0a6c, #4a3cdb); */
 }
 
 nav ul ul ul{
@@ -180,11 +188,11 @@ nav ul ul ul li{
     margin-left: 50px;
     margin-bottom: 50px; */
     margin: 200px 50px;
-    width: 60%;
+    width: 40%;
 }
 
 .textBox h1{
-    font-size: 55px;
+    font-size: 40px;
 }
 .textBox p{
     margin: 10px 0 40px;
@@ -196,8 +204,8 @@ nav ul ul ul li{
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    border: 1.5px solid #fff;
+    border-radius: 15px;
     padding: 12px;
     font-size: 13px;
     background: transparent;
@@ -205,12 +213,16 @@ nav ul ul ul li{
     cursor: pointer;
 }
 .heroBtn:hover{
-    border: 1px solid #ff0a6c;
-    background: #ff0a6c;
-    transition: 1s;
+    border: 1.5px solid #00a8ad;
+    background: #00a8ad;
+    transition: 0.5s;
 }
 
-
+.row{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -219,46 +231,30 @@ nav ul ul ul li{
 .course{
     width: 100%;
     margin: auto;
-    /* text-align: center; */
     padding-top: 80px;
 }
 .course h1{
     text-align: center;
-}
-
-.row{
-    margin-top: 2%;
-    display: flex;
-    justify-content: space-between;
+    color: #001B48;
+    background: #F9F9F9;
 }
 .courseCol{
     flex-basis: 31%;
-    background-image: linear-gradient(to right, #ccc, gray);
+    background-image: linear-gradient(to top, #001B48, #00bbc2);
     border-radius: 10px;
     margin: 10px;
     margin-bottom: 5%;
     padding: 20px 0px;
+    min-width: 300px;
     box-sizing: border-box;
     transition: 0.5s;
 }
 .cardIco{
     text-align: center;
 }
-.cardIco img{
-    margin-top: 20px;
-    width: 100px;
-}
-.roundedIMG{
-    border: 5px solid #fff;
-    border-radius: 50%;
-    /* padding: 5px; */
-    background-color: white;
-} 
-
 .courseCol h3{
-    background: #616161;
-    /* height: auto; */
-    color: #fff;
+    color: #00d7df;
+    background: #24292E;
     text-align: center;
     font-weight: 600;
     margin: 15px 0;
@@ -268,23 +264,105 @@ nav ul ul ul li{
     padding: 10px 20px 10px 20px;
     text-align: center;
     line-height: 25px;
+    color: #fff;
 }
 .cardDesc a{
     text-decoration: none;
+    color: #fff;
 }
 
-.cardDesc .heroBtn{
-    background: #ff0a6c;
-}
 .cardDesc .heroBtn:hover{
-    border: 1px solid #fff;
-    background: #4a3cdb;
+    border: 1px solid #00a8ad;
+    background: #00a8ad;
+    transform: scale(0.9);
 }
 .courseCol:hover{
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 0px 0px 10px 0px #555;
 }
 
 /* Course Design Ended */
+
+
+
+/* tutorial view started */
+
+.tutorials{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    color: #001B48;
+}
+.slider{
+    max-width: 1100px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+}
+.slider .crd{
+    background: #ccc;
+    /* background: linear-gradient(to top, #001B48, #00a8ad); */
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+.slider .crd .img{
+    height: 200px;
+    width: 100%;
+}
+.slider .crd .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.slider .crd .cont{
+    padding-bottom: 10px;
+}
+.slider .crd hr{
+    width: 90%;
+    margin: 0 auto;
+}
+.slider .crd .cont .ttl{
+    font-size: 22px;
+    font-weight: 600;
+    /* color: #e74c3c; */
+    color: #00d7df;
+    background: #24292E;
+    padding: 10px;
+}
+.crd .cont p{
+    text-align: justify;
+    margin: 10px 0;
+    color: #000;
+    padding: 0 20px;
+    min-height: 130px;
+}
+.crd .cont .heroBtn{
+    margin-top: 7px;
+}
+.crd .cont .heroBtn:hover{
+    transform: scale(0.9);
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 5px;
+    border: 1.5px solid #00a8ad!important;
+    transition: all 0.3s ease;
+}
+.owl-dot:hover,
+.owl-dot.active{
+    background: #00a8ad!important;
+}
+
+/* tutorial view started */
 
 
 
@@ -330,7 +408,7 @@ nav ul ul ul li{
 /* Feedback section Started */
 
 .Feedback{
-    width: 30%;
+    width: 35%;
     margin: 0 10%;
 }
 
@@ -352,13 +430,13 @@ nav ul ul ul li{
     font-weight: 600;
 }
 .icons .fab{
-    color: #ff0a6c;
+    color: #00a8ad;
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
 }
 .fa-heart{
-    color: #ff0a6c;
+    color: #00a8ad;
 }
 
 /* Footer section Ended */
@@ -407,9 +485,9 @@ nav ul ul ul li{
     padding: 15px 0 25px;
 }
 .redBtn{
-    border: 1px solid #ff0a6c;
+    border: 1.5px solid #00a8ad;
     background: transparent;
-    color: #ff0a6c;
+    color: #00a8ad;
 }
 .redBtn:hover{
     color: #fff;
@@ -447,13 +525,13 @@ nav ul ul ul li{
 }
 .contactCol div .fa{
     font-size: 28px;
-    color: #ff0a6c;
+    color: #00a8ad;
     margin: 10px;
     margin-right: 30px;
 }
 .contactCol div .far{
     font-size: 28px;
-    color: #ff0a6c;
+    color: #00a8ad;
     margin: 10px;
     margin-right: 30px;
 }
@@ -498,7 +576,7 @@ th, td{
     padding: 5px;
 }
 th{
-    background: #ff0a6c;
+    background: #00a8ad;
     color: #fff;
 }
 .secTable{
@@ -517,7 +595,7 @@ tr:nth-child(odd){
     background-color: #fff;
 }
 tr:hover{
-    background-color: #ff7676;
+    background-color: #b0fcff;
 }
 .FacultyP{
     width: auto;
@@ -538,8 +616,8 @@ tr:hover{
     margin: 0 auto;
 }
 .rcard{
-    /* background: linear-gradient(to top, #ff8b51, #e05ba2, #cd4bc9); */
-    background-image: linear-gradient(to bottom, #ff0a6c, #4a3cdb);
+    background-image: linear-gradient(to top, #001B48, #00bbc2);
+    /* background-image: linear-gradient(to bottom, #ff0a6c, #4a3cdb); */
     float: left;
     box-sizing: border-box;
     text-align: center;
@@ -557,22 +635,25 @@ tr:hover{
     padding: 20px;
     text-align: center;
     line-height: 30px;
+    min-height: 170px;
 }
 .rcard h3{
-    background-color: #555;
+    color: #00d7df;
+    background: #24292E;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
+    font-size: 25px;
 }
 .rcard .heroBtn{
     background: #fff;
-    color: #ff0a6c;
-    border: 1px solid #ff0a6c;
+    color: #00a8ad;
+    border: 1.5px solid #00a8ad;
 }
 .rcard .heroBtn:hover{
-    border: 1px solid #ff0a6c;
-    background: #ff0a6c;
+    border: 1.5px solid #00bbc2;
+    background: #00bbc2;
     color: #fff;
-    box-shadow: 0px 0px 3px black;
+    /* box-shadow: 0px 0px 3px black; */
 }
 .container::after{
     display: table;
@@ -580,8 +661,90 @@ tr:hover{
     clear: both;
 }
 
-
 /*--------- Result Record Ended ------------*/
+
+
+/* -------Programming Tutorial Started------ */
+
+.proTuto{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/proLap.png);
+}
+
+.proT{
+    background: #24292E;
+    /* height: 450px; */
+}
+.proT .heroBtn{
+    background: #00a8ad;
+    color: #fff;
+    border: 1.5px solid #00a8ad;
+}
+.proT .heroBtn:hover{
+    background: #00a8ad;
+    color: #fff;
+    border: 1.5px solid #fff;
+    transform: scale(0.9);
+}
+.rcard h2{
+    font-size: 30px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+    padding: 60px 0px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
+}
+
+.c{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/C.jpg); }
+.cpp{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/cpp.png); }
+.java{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/java.jpg); }
+.python{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/Python.png); }
+
+.rtxt p{
+    color: #fff;
+    text-align: justify;
+}
+.rcard hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* -------Programming Tutorial Ended------ */
+
+
+/* -------Web Tutorial Started------ */
+
+.ht{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/html.jpg); }
+.cs{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/css.jpg); }
+.btsp{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/bootstrap.png); }
+.js{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/javascript.png); }
+.jQ{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/jquery.jpg); }
+.rct{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/react.jpg); }
+.NE{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/nodeEx.jpeg); }
+.mSql{ background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/mySql.jpg); }
+
+
+/* -------Web Tutorial Ended------ */
+
+
+/* -------Core Course Tutorial Started------ */
+
+.sp h2{
+    font-size: 26px;
+    padding: 63px 0;
+}
+
+.ds { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/data_structure.png); }
+.algo { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/algotithm.jpg); }
+.dm { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/discreate_math.jpg); }
+.nm { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/numarical_method.png); }
+.os { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/operating_sys.png); }
+.toc { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/theory_comp.jpg); }
+.cd { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/compiler_des.jpg); }
+.aI { background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/artificial_intelligence.jpg); }
+
+
+/* -------Core Course Tutorial Ended------ */
 
 
 /*--------- 1stop page started ------------*/
